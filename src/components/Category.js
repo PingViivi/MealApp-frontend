@@ -1,16 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const Category = ({categoryObject}) => {
-    console.log(categoryObject)
+const Category = ({category}) => {
   return (
     <div>
-        <img src={categoryObject.strCategoryThumb} alt={categoryObject.strCategory} />
+      <img src={category.strCategoryThumb} alt={category.strCategory} />
+      <Link to={`/categories/${category.strCategory}`}>
         <h3>
-            {categoryObject.strCategory}
+            {category.strCategory}
         </h3>
-        <div>
-            {categoryObject.strCategoryDescription}
-        </div>
+      </Link>
+      <div>
+          {category.strCategoryDescription}
+      </div>
     </div>
   )
 }

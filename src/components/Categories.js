@@ -1,25 +1,15 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
 import Category from './Category'
-import CategoriesService from '../services/categories'
 
-const Categories = () => {
-    const [categories, setCategories] = useState([]) 
-    useEffect(()=> {
-    CategoriesService
-    .getAll()
-    .then(initialCategories => {
-        setCategories(initialCategories)
-    })
-    }, [])
+const Categories = ({categories}) => {
 
   return (
     <>
-        {
-            categories.categories?.map((categoryObject) => (
-                <Category categoryObject={categoryObject} key={categoryObject.idCategory}/>
-            ))
-        }        
+      {
+        categories.categories?.map((category) => (
+          <Category category={category} key={category.idCategory}/>
+        ))
+      }        
     </>
   )
 }

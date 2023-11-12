@@ -1,12 +1,12 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:3001/api/categories'
 
-const getAll = () => {
+const getAllCategories = () => {
+    const baseUrl = 'http://localhost:3001/api/categories'
     const request = axios.get(baseUrl)
     return request.then(response => response.data)
 }
 
   
 export default { 
-    getAll: getAll, 
+    getAllCategories: getAllCategories, 
 }
