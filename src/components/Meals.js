@@ -1,17 +1,17 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import Mealservice from '../services/meals'
-import { useLocation, useParams } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import Meal from './Meal'
 
 const Meals = (props) => {
   const [meals, setMeals] = useState([]);
-  const url = useLocation();
-  const currentcategory = url.pathname.replace('/categories/', '');
+  const params = useParams();
+  const category = params.category
   
   useEffect(()=> {
     Mealservice
-    .getMealsByCategory(currentcategory)
+    .getMealsByCategory(category)
     .then(initialMeals => {
       setMeals(initialMeals)
       console.log(initialMeals)
