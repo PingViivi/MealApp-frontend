@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import Categories from "./components/Categories"
 import CategoriesService from './services/categories'
 import Meals from "./components/Meals"
+import Recipe from "./components/Recipe"
 import Home from './components/Home'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Link to="/">Home</Link>
       </div>
         <Routes>
+          <Route path="/categories/:category/:meal" element={<Recipe/>} />
           <Route path="/categories" element={<Categories categories={categories}/>} />
           <Route path="/categories/:category" element={<Meals/>} />
           <Route path="/" element={<Home />} />

@@ -14,18 +14,17 @@ const Meals = (props) => {
     .getMealsByCategory(category)
     .then(initialMeals => {
       setMeals(initialMeals)
-      console.log(initialMeals)
     })
   }, [])
   
   return (
     <>
-    {
-      meals.meals?.map((meal) => (
-        <Meal meal={meal} key={meal.idMeal}/>
-      ))
-    }        
-  </>
+      {
+        meals.meals?.map((meal) => (
+          <Meal category={category} meal={meal} key={meal.idMeal}/>
+        ))
+      }        
+    </>
   )
 }
 
