@@ -3,7 +3,7 @@ import React from 'react'
 const RecipeCard = ({recipeobject}) => {
   return (
     <>
-        <div>{recipeobject.strMeal}</div>
+        <h1>{recipeobject.strMeal}</h1>
         <div>{recipeobject.strCategory}</div>
         <div>{recipeobject.strArea}</div>
         <div>{recipeobject.strTags}</div>

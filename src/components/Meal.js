@@ -7,7 +7,7 @@ const Meal = (props) => {
   // /categories/:category/:meal
   return (
     <div>
-      <Link to={`/categories/${category}/${meal.idMeal}`}>
+      <Link className='meal-item' to={`/categories/${category}/${meal.idMeal}`}>
         {meal.strMeal}
       </Link>
     </div>
