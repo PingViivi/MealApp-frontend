@@ -11,6 +11,7 @@ import {
   import Recipe from "../components/Recipe"
   import Home from '../components/Home'
   import '../styles/app.css'
+import Banner from '../components/Banner'
   
 
 const RecipeSearch = () => {
@@ -25,6 +26,7 @@ const RecipeSearch = () => {
     return (
         <>
             <div className='wrap'>
+                <Banner title={'Search recipes'} description={'You can search recipes here by category'}/>
                 <Categories categories={categories} current={()=>useLocation}/>
             </div>
         </>
