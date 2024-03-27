@@ -52,3 +52,20 @@ a.meal-item {
     text-decoration: none;
     color: #000;
 }
+
+nav.primary-nav {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            padding-right: 15px;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
